@@ -1,0 +1,12 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1    11/2/19 13:17:36:695 CST    11/2/19 13:17:36:695 CST com.ibm.ws.jaxrs20.JaxRsRuntimeException com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint 137
+                                                                            - /Users/daniel/Documents/Liberty/usr/servers/Prueba/logs/ffdc/ffdc_19.11.02_13.17.36.0.log
+     1      2    11/2/19 13:17:36:935 CST    11/2/19 13:17:37:071 CST javax.servlet.ServletException com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter 82
+                                                                            - /Users/daniel/Documents/Liberty/usr/servers/Prueba/logs/ffdc/ffdc_19.11.02_13.17.36.1.log
+     2      1    11/2/19 13:17:37:035 CST    11/2/19 13:17:37:035 CST javax.servlet.ServletException com.ibm.ws.webcontainer.filter.FilterInstanceWrapper.doFilter 144
+                                                                            - /Users/daniel/Documents/Liberty/usr/servers/Prueba/logs/ffdc/ffdc_19.11.02_13.17.37.0.log
+     3      1    11/2/19 13:17:37:071 CST    11/2/19 13:17:37:071 CST javax.servlet.ServletException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1064
+                                                                            - /Users/daniel/Documents/Liberty/usr/servers/Prueba/logs/ffdc/ffdc_19.11.02_13.17.37.1.log
+------+------+---------------------------+---------------------------+---------------------------
