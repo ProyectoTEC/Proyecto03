@@ -3,10 +3,11 @@ package cr.ac.tec.graph.api.dto;
 
 public class Node {
 	private int id, inDregree, outDregree;
+	private static int idStatic;
 	
-	public Node(int id, int inDregree, int outDregree) {
-		super();
-		this.id = id;
+	public Node(int inDregree, int outDregree) {
+		idStatic++;
+		this.id = idStatic;
 		this.inDregree = inDregree;
 		this.outDregree = outDregree;
 		

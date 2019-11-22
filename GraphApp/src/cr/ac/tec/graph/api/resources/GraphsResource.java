@@ -8,8 +8,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
-
 import cr.ac.tec.graph.api.dto.DB;
+import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Persona;
 
 @Path("/graphs")
@@ -18,23 +18,29 @@ public class GraphsResource {
 	@GET
 	@Produces("application/json")
 	public Response getGraphs() {
+		
+		Graph [] temp =new Graph[DB.lista.getLargo()];
+		for (int i=0; i<DB.lista.getLargo();i++) {
+			temp[i]=(Graph) DB.lista.Obtener(i);
+		}
 		return Response.status(200)
-				.entity(DB.db)
+				.entity(temp)
 				.build();
 	}
 	
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response createGraph(Persona p){
-		DB.db.put(p.getId(), p);
+	public Response createGraph(Graph g){
+		//DB.db.put(p.getId(), p);
+		DB.lista.InsertarFinal(g);
 		return Response.status(200)
-				.entity(p)
+				.entity(g)
 				.build();
 	}
 	
 	@Path("{id}")
-	public GraphResource handleSigleGraph(@PathParam("id") UUID graphId) {
-		return new GraphResource(graphId);
+	public GraphResource handleSigleGraph(@PathParam("id") int id) {
+		return new GraphResource(id);
 	}
 }

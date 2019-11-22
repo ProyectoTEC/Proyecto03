@@ -4,10 +4,20 @@ public class Graph {
 	private int id;
 	private Node nodes;
 	private Edge edges;
-	public Graph(Node nodes, Edge edges) {
-		super();
-		this.nodes = nodes;
-		this.edges = edges;
+	private static int idStatic;
+	
+	public Graph() {
+		idStatic++;
+		this.id = idStatic;
+		this.nodes = null;
+		this.edges = null;
+	}
+	
+	public Graph(String nombre) {
+		idStatic++;
+		this.id = idStatic;
+		this.nodes = null;
+		this.edges = null;
 	}
 	public Node getNodes() {
 		return nodes;

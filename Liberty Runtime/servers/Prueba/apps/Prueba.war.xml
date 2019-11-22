@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive>
-    <dir sourceOnDisk="/Users/daniel/eclipse-workspace/Prueba/WebContent" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/daniel/eclipse-workspace/Prueba/build/classes" targetInArchive="/WEB-INF/classes"/>
-</archive>
